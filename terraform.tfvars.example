@@ -1,0 +1,13 @@
+# terraform.tfvars.example  ->  copy to terraform.tfvars and adjust.
+
+aws_region   = "eu-west-1"
+project_name = "zerotrust"
+environment  = "dev"
+owner_tag    = "mayssam-hergli"
+
+# US 1.1
+unused_access_age_days = 30
+
+# US 1.2 - lock role assumption to your VPN/office egress IPs (strongly recommended)
+trusted_cidrs       = [] # e.g. ["41.226.0.0/16"]
+max_mfa_age_seconds = 3600
